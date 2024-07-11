@@ -18,8 +18,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             CircleProgressView(progress: progress)
-                .progressStartPoint(.left)
-                .progressColor(.red)
+                .progressStartPoint(progressStartPoint)
+                .progressColor(progressColor)
                 .progressLineWidth(progressLineWidth)
                 .showProgressTray(showProgressTray)
                 .progressBackgroundColor(progressBackgroundColor)
