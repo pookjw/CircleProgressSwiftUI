@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var progressStartPoint: CircleProgressView.ProgressStartPoint = .top
     @State private var progressColor: Color = .blue
-    @State private var progressLineWidth: CGFloat = 20.0
+    @State private var progressLineWidth: CGFloat = 0.2
     @State private var showProgressTray: Bool = false
     @State private var progress: Double = 0.3
     @State private var progressBackgroundColor: Color = .gray
@@ -18,8 +18,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             CircleProgressView(progress: progress)
-                .progressStartPoint(progressStartPoint)
-                .progressColor(progressColor)
+                .progressStartPoint(.left)
+                .progressColor(.red)
                 .progressLineWidth(progressLineWidth)
                 .showProgressTray(showProgressTray)
                 .progressBackgroundColor(progressBackgroundColor)
